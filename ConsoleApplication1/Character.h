@@ -28,7 +28,18 @@ class Character
 	vector<Move> spellArray;
 
 public:
-	Character(/*int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr*/) {};
+	Character() {};
+	Character(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr) {
+	
+		abilitySlots = aSlots;
+		spellSlots = sSlots;
+		attackPower = apwr;
+		magicPower = mpwr;
+		health = hlth;
+		defPower = dpwr;
+		magicDefPower = mdpwr;
+
+	};
 	~Character() {};
 
 	void setName(string n) {
@@ -45,7 +56,7 @@ public:
 		return health;
 	}
 
-	void setAttackPwr(int a) {
+	void setAttackPwr(int &a) {
 		a = attackPower;
 	}
 	int getAttackPwr() {

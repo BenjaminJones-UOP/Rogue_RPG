@@ -29,9 +29,9 @@
 
 int main() {
 
-	Player player1(0, 0, 4, 0, 0, 0, 0);
+	Player* player1 = new Player(1,2,4,10,3,2,3);
 
-	cout << player1.getAttackPwr() << endl;
+	cout << player1->getAttackPwr() << endl;
 
 	return 0;
 }
