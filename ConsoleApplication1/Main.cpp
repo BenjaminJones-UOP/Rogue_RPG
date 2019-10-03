@@ -10,15 +10,19 @@
 //Starting classes - Warrior, Rogue and Wizard
 //Level up into different classes are the same
 
+//Floor
 //Binding of isaac in terms of floors
 //Randomly create floors
 //Floors have rooms
 //Rooms can be enemies, nothing, items or abilities
+//Different theme for each floor with different enemies
+//For example, first floor currently Imps and goblins
 
+//Rooms
 //Enemies increase in stats as floors increase
-//Names: Eyegor, Minotaur, Gorgon, Korrigan, Hippogryph
+//Test Names: Eyegor, Minotaur, Gorgon, Korrigan, Hippogryph
 //Max of three enemies per room
-//Attack, abilities and spells same as player
+//Attack, abilities and spells same as player can; different for enemies for flavour
 
 //Classes: 
 //Characters -> Player, Enemy
@@ -29,7 +33,7 @@
 
 int main() {
 
-	Player* player1 = new Player(1,2,4,10,3,2,3);
+	unique_ptr<Player> player1(new Player(1,2,4,10,3,2,3,0));
 
 	cout << player1->getAttackPwr() << endl;
 

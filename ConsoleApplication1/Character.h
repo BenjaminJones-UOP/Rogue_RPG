@@ -20,6 +20,7 @@ class Character
 	int magicPower;
 	int defPower;
 	int magicDefPower;
+	int speed;
 
 	int abilitySlots;
 	int spellSlots;
@@ -29,7 +30,7 @@ class Character
 
 public:
 	Character() {};
-	Character(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr) {
+	Character(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr, int spd) {
 	
 		abilitySlots = aSlots;
 		spellSlots = sSlots;
@@ -38,6 +39,7 @@ public:
 		health = hlth;
 		defPower = dpwr;
 		magicDefPower = mdpwr;
+		speed = spd;
 
 	};
 	~Character() {};
@@ -84,8 +86,15 @@ public:
 		return magicDefPower;
 	}
 
+	void setSpeed(int spd) {
+		speed = spd;
+	}
+	int getSpeed() {
+		return speed;
+	}
 
-	virtual void attack(){}
+
+	virtual void attack() = 0;
 
 	//Player and enemy are going to initialise abilites differently
 	virtual void initialiseAbilites() {

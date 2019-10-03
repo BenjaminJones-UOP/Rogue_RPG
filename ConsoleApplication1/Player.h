@@ -8,20 +8,26 @@ public:
 
 	Player() : Character() {};
 
-	Player(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr) : 
-		Character(aSlots, sSlots, apwr, mpwr, hlth, dpwr, mdpwr) 
+	Player(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr, int spd) : 
+		Character(aSlots, sSlots, apwr, mpwr, hlth, dpwr, mdpwr, spd) 
 	{
 
 		
 	}; //When a player is created, initial values go into its character variables
 	~Player() {};
 
-	virtual void attack() {}
+	enum playerType {
+		Warrior,
+		Rogue,
+		Mage
+	}m_playerType;
 
-	virtual void initialiseAbilites() override {
+	void attack() {}
+
+	void initialiseAbilites() override {
 		
 	}
-	virtual void initialiseSpells() override {
+	void initialiseSpells() override {
 		
 	}
 };

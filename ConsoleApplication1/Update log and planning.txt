@@ -1,0 +1,18 @@
+To do (Master design list, will be updated as ideas come):
+ - Item (Armour, weapon and potion) class(s)
+ - Floor class
+ - Room class
+ - Gameplay interaction (Turn combat, attacking each other, healing each other, casting spells)
+ - Shop
+
+03/10/2019
+
+To do:
+- Item classes
+
+Done:
+- Added speed variable to characters
+- Created base item class
+
+Next session:
+- Create armour and weapon derived classes
