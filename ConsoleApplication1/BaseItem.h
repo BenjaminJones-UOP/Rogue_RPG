@@ -14,7 +14,6 @@ class BaseItem {
 	string description;
 
 public:
-	BaseItem() { value = 0; name = "BaseItem"; description = "BaseItemDescription"; }; //Default values for debugging
 	BaseItem(int val, string nm, string desc) { //If an item is needing to be created with values
 		value = val;
 		name = nm;

@@ -29,7 +29,6 @@ class Character
 	vector<Move> spellArray;
 
 public:
-	Character() {};
 	Character(int aSlots, int sSlots, int apwr, int mpwr, int hlth, int dpwr, int mdpwr, int spd) {
 	
 		abilitySlots = aSlots;
@@ -45,56 +44,67 @@ public:
 	~Character() {};
 
 	void setName(string n) {
-		n = name;
+		name = n;
 	}
 	string getName() {
 		return name;
 	}
 
-	void setHealth(int h) {
-		h = health;
+	void setHealth(int &h) {
+		health = h;
 	}
 	int getHealth() {
 		return health;
 	}
 
 	void setAttackPwr(int &a) {
-		a = attackPower;
+		attackPower = a;
 	}
 	int getAttackPwr() {
 		return attackPower;
 	}
 
-	void setMagPwr(int m) {
-		m = magicPower;
+	void setMagPwr(int &m) {
+		magicPower = m;
 	}
 	int getMagPwr() {
 		return magicPower;
 	}
 
-	void setDefPwr(int d) {
-		d = defPower;
+	void setDefPwr(int &d) {
+		defPower = d;
 	}
 	int getDefPwr() {
 		return defPower;
 	}
 
-	void setMagDefPwr(int md) {
-		md = magicDefPower;
+	void setMagDefPwr(int &md) {
+		magicDefPower = md;
 	}
 	int getMagDefPwr() {
 		return magicDefPower;
 	}
 
-	void setSpeed(int spd) {
+	void setSpeed(int &spd) {
 		speed = spd;
 	}
 	int getSpeed() {
 		return speed;
 	}
 
+	void setAbilitySlots(int &aSlots) {
+		abilitySlots = aSlots;
+	}
+	int getAbilitySlots() {
+		return abilitySlots;
+	}
 
-	virtual void attack() = 0;
+	void setSpellSlots(int &sSlots) {
+		spellSlots = sSlots;
+	}
+	int getSpellSlots(){
+		return spellSlots;
+	}
 
 	//Player and enemy are going to initialise abilites differently
 	virtual void initialiseAbilites() {
@@ -104,14 +114,14 @@ public:
 		spellArray.resize(spellSlots);
 	}
 
-	//Only player?
-	void addAbility(Move newAbility) {
+	void addAbility(Move &newAbility) { //possible reference/pointer here
 		++abilitySlots;
 
 		abilityArray[abilitySlots - 1] = newAbility;
 	}
-	//Only player?
-	void addSpell(Move newSpell) {
+	void addSpell(Move &newSpell) {
 		++spellSlots;
+
+		spellArray[spellSlots - 1] = newSpell;
 	}
 };

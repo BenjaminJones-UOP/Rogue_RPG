@@ -1,9 +1,22 @@
 To do (Master design list, will be updated as ideas come):
- - Item (Armour, weapon and potion) class(s)
+ - Item classes: 
+	- Weapon (done)
+	- Armour (done)
+	- Potion
+	- Grenades/Scrolls?
  - Floor class
  - Room class
- - Gameplay interaction (Turn combat, attacking each other, healing each other, casting spells)
- - Shop
+ - Gameplay interaction: (Turn combat, attacking each other, healing each other, casting spells)
+	- Turn based combat
+	- Attacking eachother (done)
+	- Healing eachother
+	- Casting spells
+ - Player and enemy generation
+ - Leveling up and perk system
+ - Specialised rooms: 
+	- God
+	- Item
+	- Shop
 
 03/10/2019
 
@@ -16,3 +29,49 @@ Done:
 
 Next session:
 - Create armour and weapon derived classes
+
+30/12/2019
+
+To do:
+- Create Weapon and Armour classes
+
+Done:
+- Started weapon class
+
+Next Session:
+- Complete Weapon class
+- Armour class derive from item
+
+06/01/2020
+
+To do: 
+- Complete weapon class
+
+Done:
+- Weapon class
+
+Next Session:
+- Armour class
+- Attack functions
+
+16/01/2020
+
+To do:
+- Armour Class
+
+Done:
+- Armour Class
+
+Next Session:
+- Attack functions 
+
+21/01/2020
+
+To do:
+- Attack functions
+
+Done:
+- Attack functions and tested
+
+Next Session:
+- Randomisation of enemy and player when created

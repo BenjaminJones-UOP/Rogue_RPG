@@ -33,9 +33,19 @@
 
 int main() {
 
-	unique_ptr<Player> player1(new Player(1,2,4,10,3,2,3,0));
+	Character *characterPtr;
 
-	cout << player1->getAttackPwr() << endl;
+	Armour startArmour(10,10,"Start Armour", "Start Armour desc", 10);
+	Weapon startWeapon( 10, "Start Weapon", "Start Weapon desc", 10);
+
+	Player player1(1,2,4,10,3,2,3,0,startArmour, startWeapon);
+
+	Enemy enemy1(1,1,5,5,30,4,5,6);
+
+	std::cout << "Enemy Health: " << enemy1.getHealth() << std::endl;
+	characterPtr = &enemy1;
+	player1.Attack(*characterPtr);
+	std::cout << "Enemy Health after attack: " << enemy1.getHealth() << std::endl;
 
 	return 0;
 }
